@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chipmunk AI</title>
+    <link rel="stylesheet" href="./assets/lib/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loadingContainer" class="loading-container">
+        <div class="loading-spinner"></div>
+        <span class="loading-text">Loading game data...</span>
+    </div>
+
+    <div class="logo-container">
+        <img src="./assets/img/logo.png" alt="Logo" class="logo">
+        <span class="slogan">Hold my nut!</span>
+    </div>
+    
+    <div id="threejs-container"></div>
+    <canvas></canvas>
+
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <span>CHIPMUNK AI</span>
+            <button class="close-chatbot">×</button>
+        </div>
+        <div class="chat-messages">
+            <div class="message bot-message">Hello! The satellite Chipmunk in Earth's orbit is in communication with you. How can I assist?</div>
+        </div>
+    </div>
+
+    <div class="chat-input-container-bottom">
+        <input type="text" class="chat-input" placeholder="Type to chipmunk..." autofocus>
+        <button class="send-button">Send</button>
+    </div>
+
+    <div id="mediaPlayer" class="media-player">
+        <div class="media-header">
+            <span>CHIPMUNK LIVE</span>
+            <button id="closeMediaPlayer">×</button>
+        </div>
+        <iframe width="500" height="305" src="https://www.youtube.com/embed/ptj6rYD-Yzc" title="Chipmunk INTRO &quot; Hold my nut! &quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="live-events">
+        <p class="event"></p>
+        <table class="event-table">
+            <tr class="heading">
+                <td>STATUS</td>
+                <td>CHIPMUNK PREDICTION</td>
+            </th>
+            <tr>
+                <td class="status"></td>
+                <td class="guess"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="playersPopup" class="icon-popup">
+        <div class="popup-content">
+            <span class="close-popup">×</span>
+            <h3>Players</h3>
+        </div>
+    </div>
+
+    <div id="strikePopup" class="icon-popup">
+        <div class="popup-content">
+            <span class="close-popup">×</span>
+            <h3>Strike</h3>
+            <div class="list"></div>
+        </div>
+    </div>
+
+    <div id="homerunPopup" class="icon-popup">
+        <div class="popup-content">
+            <span class="close-popup">×</span>
+            <h3>Home Run</h3>
+            <div class="list"></div>
+        </div>
+    </div>
+
+    <div id="venuePopup" class="icon-popup">
+        <div class="popup-content">
+            <span class="close-popup">×</span>
+            <h3>Venue</h3>
+            <div class="map"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="./assets/lib/script.js"></script>
+</body>
+</html>
